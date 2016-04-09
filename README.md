@@ -9,7 +9,7 @@ $ npm i sort-array-objects --save
 ## Usage
 
 ```js
-import sortArrayObjects { ASC, DESC } from 'sort-array-objects';
+import sortArrayObjects, { ASC, DESC } from 'sort-array-objects';
 
 const arr = [
     { id: 1, a: 456, b: 635, c: 682 },
