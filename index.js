@@ -8,16 +8,18 @@ export const DESC = 'desc';
  * @param {String} order - Order (asc or desc)
  * @param {String} prop1 - Name of first (main) property
  * @param {String} prop2 - Name of second property
+ *
+ * @returns {Array}
  */
-function sortArrayObjects(arr, order = ASC, prop1, prop2 = 'id') {
+function sortArrayObjects(arr, order, prop1, prop2 = 'id') {
     if (!Array.isArray(arr)) {
         console.warn(`'arr' argument is not an array. Skip sorting.`);
-        return;
+        return arr;
     }
 
     if (typeof prop1 !== 'string') {
         console.warn(`'prop1' argument is not a string. Skip sorting.`);
-        return;
+        return arr;
     }
 
     if (order !== ASC && order !== DESC) {
@@ -28,7 +30,7 @@ function sortArrayObjects(arr, order = ASC, prop1, prop2 = 'id') {
     const order1 = order === ASC ? -1 : 1;
     const order2 = order === ASC ? 1 : -1;
 
-    arr.sort((a, b) => {
+    return arr.sort((a, b) => {
         let colA = a[prop1];
         let colB = b[prop1];
 

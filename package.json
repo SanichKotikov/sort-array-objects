@@ -1,6 +1,6 @@
 {
   "name": "sort-array-objects",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sorts objects of an array by property(ies)",
   "main": "./lib/index.js",
   "jsnext:main": "./index.js",

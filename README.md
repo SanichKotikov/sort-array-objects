@@ -1,4 +1,7 @@
-Sorts objects of an array by property(ies).
+Sorts objects of an array by specified property, or second property if first are equal.   
+Note: second property has default value = 'id';
+
+This method sorts _in place_ and returns the array.
 
 ## Install
 
@@ -19,6 +22,12 @@ const arr = [
 
 sortArrayObjects(arr, DESC, 'a', 'c');
 
+```
+
+If you need a new array, you may do something like this:
+
+```js
+const newArr = sortArrayObjects(arr.slice(), DESC, 'a', 'c');
 ```
 
 ## License
