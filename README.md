@@ -12,7 +12,7 @@ $ npm i sort-array-objects --save
 ## Usage
 
 ```js
-import sortArrayObjects, { ASC, DESC } from 'sort-array-objects';
+import sort, { ASC, DESC } from 'sort-array-objects';
 
 const arr = [
     { id: 1, a: 456, b: 635, c: 682 },
@@ -20,14 +20,20 @@ const arr = [
     { id: 3, a: 100, b: 238, c: 123 },
 ];
 
-sortArrayObjects(arr, DESC, 'a', 'c');
+const props = ['a', 'b'];
 
+sort(arr, props, DESC);
+// ==> [
+// {"id":2,"a":100,"b":99,"c":333},
+// {"id":3,"a":100,"b":238,"c":123},
+// {"id":1,"a":456,"b":635,"c":682}
+// ]
 ```
 
 If you need a new array, you may do something like this:
 
 ```js
-const newArr = sortArrayObjects(arr.slice(), DESC, 'a', 'c');
+const newArr = sort([..arr], props, DESC);
 ```
 
 ## License
