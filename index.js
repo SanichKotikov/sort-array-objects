@@ -26,7 +26,7 @@ function compare(a, b, prop, order) {
 }
 
 /**
- * Sorts objects of an array by property(ies).
+ * Sorts an array of objects by a property or by several properties.
  *
  * @param {Array} arr - source array
  * @param {string|string[]} props - name of property, or an array of names.

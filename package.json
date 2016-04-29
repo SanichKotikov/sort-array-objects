@@ -1,7 +1,7 @@
 {
   "name": "sort-array-objects",
   "version": "2.0.0",
-  "description": "Sorts objects of an array by property(ies)",
+  "description": "Sorts an array of objects by a property or by several properties",
   "main": "./lib/index.js",
   "jsnext:main": "./index.js",
   "files": [

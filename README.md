@@ -1,6 +1,4 @@
-Sorts objects of an array by specified property, or second property if first are equal.   
-Note: second property has default value = 'id';
-
+Sorts an array of objects by a property or by several properties.   
 This method sorts _in place_ and returns the array.
 
 ## Install
